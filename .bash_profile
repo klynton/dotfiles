@@ -1,19 +1,9 @@
 # Add `~/bin` to the `$PATH`
-if [ "$(uname -v)"="joyent_20130322T181205Z" ]; then
-    export PATH="/opt/local/gnu/bin:$PATH"
-    export PATH="/opt/local/bin:$PATH"
-    export PATH="/opt/local/sbin:$PATH"
-    export PATH="/usr/bin:$PATH"
-    export PATH="/usr/sbin:$PATH"
-elif [ "$(uname -v)"="Darwin" ]; then
-    export PATH="/usr/local/bin:$PATH"
-    export PATH="/usr/local/sbin:$PATH"
-    export PATH="$HOME/bin:$PATH"
-else 
-    export PATH="/usr/local/bin:$PATH"
-    export PATH="/usr/local/sbin:$PATH"
-    export PATH="$HOME/bin:$PATH"
-fi
+
+export PATH="/usr/local/git/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -51,3 +41,5 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh

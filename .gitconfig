@@ -32,7 +32,10 @@
 
 [user]
 	name = Klynton Jessup
-	email = klynton@objectsyndicate.com
+	email = klynton@puppetlabs.com
+
+[credential]
+	helper = osxkeychain
 
 [core]
 	# Use custom `.gitignore`

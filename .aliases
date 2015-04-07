@@ -3,7 +3,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
@@ -15,6 +14,7 @@ alias g="git"
 alias h="history"
 alias m="mate ."
 alias s="subl ."
+alias a="atom ."
 alias o="open"
 alias oo="open ."
 
@@ -127,4 +127,3 @@ done
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
-alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"

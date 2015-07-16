@@ -28,6 +28,10 @@ set undofile
 set incsearch
 set hlsearch
 
+# Why would the default be on top and the left anyway?
+set splitbelow
+set splitright
+
 set title
 
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
@@ -41,6 +45,12 @@ set formatoptions=qrn1
 set colorcolumn=99
 
 nnoremap ; :
+
+# Fix vim splitting to save a keystroke.
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 :colorscheme coalgraal
 :set number

@@ -28,4 +28,4 @@ unset doIt
 source ~/.bash_profile
 
 echo "Pulling down the latest VIM modules."
-/usr/bin/ruby .vim/update_bundles
+/usr/bin/ruby ~/.vim/update_bundles

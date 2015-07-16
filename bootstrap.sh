@@ -11,9 +11,6 @@ echo "Your original .bash_profile has been backed up to .bash_profile.bak"
 echo "Your original .bashrc has been backed up to .bashrc.bak"
 echo "Your original .gitconfig has been backed up to .gitconfig.bak"
 
-echo "Pulling down the latest VIM modules."
-/usr/bin/ruby ~/.vim/update_bundles
-
 git pull
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
@@ -29,3 +26,6 @@ else
 fi
 unset doIt
 source ~/.bash_profile
+
+echo "Pulling down the latest VIM modules."
+/usr/bin/ruby .vim/update_bundles

@@ -1,11 +1,10 @@
-pathogen#infect('bundle/{}')
+execute pathogen#infect()
 set nocompatible
 set go-=T
 
 call pathogen#helptags()
-call pathogen#incubate()
 
-syntax enable
+syntax on
 filetype plugin indent on
 
 set encoding=utf-8
@@ -46,7 +45,7 @@ set colorcolumn=99
 
 nnoremap ; :
 
-# Fix vim splitting to save a keystroke.
+" Fix vim splitting to save a keystroke.
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>

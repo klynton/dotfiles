@@ -1,7 +1,7 @@
 # Add `~/bin` to the `$PATH`
 
 # Added for use with pkgsrc
-export PATH=/usr/pkg/sbin:/usr/pkg/bin:$PATH
+export PATH=/opt/pkg/sbin:/opt/pkg/bin:$PATH
 
 export PATH="/usr/local/git/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
@@ -9,7 +9,7 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
 # Added for use with pkgsrc
-export MANPATH=/usr/pkg/man:$MANPATH
+export MANPATH=/opt/pkg/man:$MANPATH
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.

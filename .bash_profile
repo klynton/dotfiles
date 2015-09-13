@@ -2,7 +2,8 @@
 
 # Added for use with pkgsrc
 export PATH=/opt/pkg/sbin:/opt/pkg/bin:$PATH
-
+# Added for the 4.x version of Puppet
+export PATH=/opt/puppetlabs/bin:$PATH
 export PATH="/usr/local/git/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"

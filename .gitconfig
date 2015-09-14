@@ -32,7 +32,7 @@
 
 [user]
 	name = Klynton Jessup
-	email = klynton@puppetlabs.com
+	email = klynton@hellosign.com
 
 [credential]
 	helper = osxkeychain

@@ -12,6 +12,9 @@ export PATH="$HOME/bin:$PATH"
 # Added for use with pkgsrc
 export MANPATH=/opt/pkg/man:$MANPATH
 
+# Set the GOPATH
+export GOPATH="$HOME/src/go"
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.

@@ -1,7 +1,6 @@
 # Make the dotfiles symlinks so I don't have to copy files.
 
-$dotfiles_path = '~/src/dotfiles'
-
+$dotfiles_path = '/Users/klynton/src/dotfiles'
 $dotfiles = [
   '.aliases',
   '.bash_profile',
@@ -21,18 +20,16 @@ $dotfiles = [
   '.vimrc',
 ]
 
-$vim_dir = [ '.vim' ]
+$vim_dir = '.vim'
 
-$dotfiles.each |String $dotfiles| {
-  file { "~/${dotfiles}":
+$dotfiles.each |String $dotfile| {
+  file { "/Users/klynton/${dotfile}":
     ensure => link,
-    target => "${dotfiles_path}/${dotfiles}",
+    target => "${dotfiles_path}/${dotfile}",
   }
 }
-->
-file { "~/${vim_dir}":
+
+file { "/Users/klynton/${vim_dir}":
   ensure => link,
   target => "${dotfiles_path}/${vim_dir}",
 }
-~>
-exec { 'source ~/.bash_profile': }

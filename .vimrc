@@ -3,7 +3,7 @@ filetype off
 set go-=T
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim,~/.fzf
+set rtp+=~/.vim/bundle/Vundle.vim,/usr/local/opt/fzf
 call vundle#begin()
 
 " let Vundle manage Vundle, required

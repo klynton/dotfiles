@@ -31,5 +31,6 @@ $dotfiles.each |String $dotfile| {
 
 file { "/Users/klynton/${vim_dir}":
   ensure => link,
+  force  => true,
   target => "${dotfiles_path}/${vim_dir}",
 }

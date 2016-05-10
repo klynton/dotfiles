@@ -3,41 +3,38 @@ filetype off
 set go-=T
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim,/usr/local/opt/fzf
-call vundle#begin()
+set rtp+=~/.vim/autoload/plug.vim,/usr/local/opt/fzf
+call plug#begin()
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'garbas/vim-snipmate'
+Plug 'timcharper/textile.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-haml'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vividchalk'
+Plug 'tsaleh/vim-align'
+Plug 'tsaleh/vim-shoulda'
+Plug 'ervandew/supertab'
+Plug 'vim-ruby/vim-ruby'
+Plug 'hdima/python-syntax'
+Plug 'scrooloose/nerdtree'
+Plug 'yodiaditya/vim-pydjango'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'airblade/vim-rooter'
+Plug 'scrooloose/syntastic'
+Plug 'tomtom/tlib_vim'
+Plug 'tpope/vim-jdaddy'
+Plug 'vim-scripts/python.vim--Vasiliev'
+Plug 'rodjek/vim-puppet'
+Plug 'flazz/vim-colorschemes'
+Plug 'gioele/vim-autoswap'
 
-Plugin 'garbas/vim-snipmate'
-Plugin 'timcharper/textile.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-vividchalk'
-Plugin 'tsaleh/vim-align'
-Plugin 'tsaleh/vim-shoulda'
-Plugin 'ervandew/supertab'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'hdima/python-syntax'
-Plugin 'scrooloose/nerdtree'
-Plugin 'yodiaditya/vim-pydjango'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'airblade/vim-rooter'
-Plugin 'scrooloose/syntastic'
-Plugin 'tomtom/tlib_vim'
-Plugin 'tpope/vim-jdaddy'
-Plugin 'vim-scripts/python.vim--Vasiliev'
-Plugin 'rodjek/vim-puppet'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'gioele/vim-autoswap'
+call plug#end()
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax on

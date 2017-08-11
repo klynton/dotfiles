@@ -32,7 +32,7 @@
 
 [user]
 	name = Klynton Jessup
-	email = klynton@hellosign.com
+	email = klynton.jessup@hellosign.com
 
 [credential]
 	helper = osxkeychain
@@ -63,9 +63,23 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 [mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
+# If you want to set up Kaleidoscope as the default merge tool,
+# then also set the following variables:
+[mergetool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
+
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+# If you want to set up Kaleidoscope as the default diff tool,
+# then also set the following variables:
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
 
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
@@ -89,6 +103,7 @@
 [push]
 	default = simple
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
 	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

@@ -35,6 +35,7 @@
 	name = Klynton Jessup
 	email = klynton@objectsyndicate.com
 
+
 [credential]
 	helper = osxkeychain
 
